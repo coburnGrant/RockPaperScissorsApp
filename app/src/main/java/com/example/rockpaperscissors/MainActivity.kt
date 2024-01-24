@@ -2,7 +2,6 @@ package com.example.rockpaperscissors
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import kotlin.random.Random
@@ -37,29 +36,29 @@ class MainActivity : AppCompatActivity() {
         yourMoveText = findViewById(R.id.yourMoveText)
     }
 
-    fun rockClicked(view: View) {
+    fun rockClicked() {
         if (!isGameOver) {
             handleMove(RockPaperScissorsMove.rock)
         }
     }
-    fun paperClicked(view: View) {
+    fun paperClicked() {
         if (!isGameOver) {
             handleMove(RockPaperScissorsMove.paper)
         }
     }
-    fun scissorsClicked(view: View) {
+    fun scissorsClicked() {
         if (!isGameOver) {
             handleMove(RockPaperScissorsMove.scissors)
         }
     }
-    fun newGameClicked(view: View) {
+    fun newGameClicked() {
         isGameOver = false
         droidMoveText.text = "Droid Move:"
         yourMoveText.text = "Your Move:"
         resultText.text = ""
     }
 
-    fun handleMove(move: RockPaperScissorsMove) {
+    private fun handleMove(move: RockPaperScissorsMove) {
         userMove = move
         droidMove = randomMove()
 
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         handleWinner()
     }
 
-    fun randomMove(): RockPaperScissorsMove {
+    private fun randomMove(): RockPaperScissorsMove {
         val randomNumber = Random.nextInt(3)
 
         val randomMove = when (randomNumber) {
