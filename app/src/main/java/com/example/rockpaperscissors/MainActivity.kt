@@ -2,6 +2,7 @@ package com.example.rockpaperscissors
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import kotlin.random.Random
@@ -36,22 +37,22 @@ class MainActivity : AppCompatActivity() {
         yourMoveText = findViewById(R.id.yourMoveText)
     }
 
-    fun rockClicked() {
+    fun rockClicked(view:View) {
         if (!isGameOver) {
             handleMove(RockPaperScissorsMove.rock)
         }
     }
-    fun paperClicked() {
+    fun paperClicked(view:View) {
         if (!isGameOver) {
             handleMove(RockPaperScissorsMove.paper)
         }
     }
-    fun scissorsClicked() {
+    fun scissorsClicked(view:View) {
         if (!isGameOver) {
             handleMove(RockPaperScissorsMove.scissors)
         }
     }
-    fun newGameClicked() {
+    fun newGameClicked(view:View) {
         isGameOver = false
         droidMoveText.text = "Droid Move:"
         yourMoveText.text = "Your Move:"
