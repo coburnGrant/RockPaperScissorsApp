@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#45494A"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/droidMoveText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Droid Move: "
-        android:textAlignment="viewStart"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/yourMoveText"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintVertical_bias="0.282" />
 
     <TextView
         android:id="@+id/titleText"
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:text="Rock Paper Scissors!"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,38 +44,38 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <TextView
         android:id="@+id/yourMoveText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="Your Move: "
-        android:textAlignment="viewStart"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rockButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933" />
+        app:layout_constraintVertical_bias="0.591" />
 
     <Button
         android:id="@+id/paperButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Paper"
-        android:textSize="20sp"
         android:onClick="paperClicked"
+        android:text="📄"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -85,9 +87,9 @@
         android:id="@+id/scissorsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scissors"
-        android:textSize="20sp"
         android:onClick="scissorsClicked"
+        android:text="✂"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
@@ -99,9 +101,9 @@
         android:id="@+id/rockButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rock"
-        android:textSize="20sp"
         android:onClick="rockClicked"
+        android:text="✊"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/paperButton"
         app:layout_constraintHorizontal_bias="0.65"
@@ -114,14 +116,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="newGameClicked"
         android:text="New Game"
         android:textSize="20sp"
-        android:onClick="newGameClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paperButton"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun newGameClicked(view:View) {
         isGameOver = false
-        droidMoveText.text = "Droid Move:"
-        yourMoveText.text = "Your Move:"
+        droidMoveText.text = ""
+        yourMoveText.text = ""
         resultText.text = ""
     }
 
@@ -63,9 +63,9 @@ class MainActivity : AppCompatActivity() {
         userMove = move
         droidMove = randomMove()
 
-        yourMoveText.text = "Your Move: ${userMove!!.move}"
+        yourMoveText.text = "${userMove!!.emoji}"
 
-        droidMoveText.text = "Droid Move: ${droidMove!!.move}"
+        droidMoveText.text = "${droidMove!!.emoji}"
 
         handleWinner()
     }
@@ -108,11 +108,10 @@ class MainActivity : AppCompatActivity() {
             return droidWonText
         }
     }
-
 }
 
-enum class RockPaperScissorsMove(val move: String) {
-    rock("Rock"),
-    paper("Paper"),
-    scissors("Scissors")
+enum class RockPaperScissorsMove(val move: String, val emoji: String) {
+    rock("Rock", "✊"),
+    paper("Paper", "📄"),
+    scissors("Scissors", "✂")
 }
