@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="scissorsClicked"
-        android:text="✂"
+        android:text="✂️"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="rockClicked"
-        android:text="✊"
+        android:text="🤜"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/paperButton"
@@ -136,17 +136,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.258"
         app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"
-        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -92,9 +92,9 @@ class MainActivity : AppCompatActivity() {
         val userMove = userMove!!
         val droidMove = droidMove!!
 
-        val youWonText = "You won!"
+        val youWonText = "🎉 You won! 🎉"
         val tieText = "Tie!"
-        val droidWonText = "Droid won!"
+        val droidWonText = "Droid won! 😔"
 
         if (userMove == droidMove) {
             return tieText
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 enum class RockPaperScissorsMove(val move: String, val emoji: String) {
-    rock("Rock", "✊"),
+    rock("Rock", "🤛"),
     paper("Paper", "📄"),
-    scissors("Scissors", "✂")
+    scissors("Scissors", "✂️")
 }
